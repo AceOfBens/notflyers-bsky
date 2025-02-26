@@ -18,6 +18,7 @@ export default async function getPostText()
 	var quoteReg = new RegExp(`\\\\"`, "g"); // A regex to deal with \". This should be replaced with a " value with no \.
 	var andReg = new RegExp("&amp;", "g"); // A regex to deal with &amp;. This should be replaced with &.
 	var logoReg = new RegExp("&nbsp;", "g"); // A regex to deal with &nbsp;. Should be deleted.
+	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var nhlflyersReg = new RegExp("@notflyer@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
