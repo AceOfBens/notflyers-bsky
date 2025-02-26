@@ -4,7 +4,7 @@ const mastodon = new Mastodon.API({access_token: 'PRZhmwmS5fpkXo442UE8SGHv8TL7XO
 /*
 	getPostText():
 
-	This function performs a Mastodon API GET request to get the n most recent tweets created by Walt Ruff. Using this, the function formats these strings down into the desired plaintext of a Bluesky post, stripping out all of the unnecessary HTML tag notation and handling formatting such that the text is compatible with Bluesky.
+	This function performs a Mastodon API GET request to get the n most recent tweets created by the Flyers. Using this, the function formats these strings down into the desired plaintext of a Bluesky post, stripping out all of the unnecessary HTML tag notation and handling formatting such that the text is compatible with Bluesky.
 
 	args: None
 
@@ -18,7 +18,6 @@ export default async function getPostText()
 	var quoteReg = new RegExp(`\\\\"`, "g"); // A regex to deal with \". This should be replaced with a " value with no \.
 	var andReg = new RegExp("&amp;", "g"); // A regex to deal with &amp;. This should be replaced with &.
 	var logoReg = new RegExp("&nbsp;", "g"); // A regex to deal with &nbsp;. Should be deleted.
-	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var nhlflyersReg = new RegExp("@notflyer@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
