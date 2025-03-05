@@ -21,23 +21,33 @@ export default async function getPostText()
 	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var nhlflyersReg = new RegExp("@nhlflyers@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
-	var nbcsphillyReg = new RegExp("@nbcsphilly", "g");
+	var nbcsphillyReg = new RegExp("@NBCSPhilly", "g");
 	var wmmrReg = new RegExp("@933WMMR", "g");
 	var pecoReg = new RegExp("@PECOConnect", "g");
-	var wfcReg = new RegExp("@wellsfargoctr", "g");
+	var wfcReg = new RegExp("@WellsFargoCtr", "g");
 	var huluReg = new RegExp("@hulu", "g");
 	var espnReg = new RegExp("@espn", "g");
-	var fanaticReg = new RegExp("@975thefanatic", "g");
-	var nhlgrittyReg = new RegExp("@nhlgritty", "g");
-	var eaglesReg = new RegExp("@eagles", "g");
-	var philliesReg = new RegExp("@phillies", "g");
+	var espnplusReg = new RegExp("@ESPNPlus", "g");
+	var tntReg = new RegExp("@NHL_On_TNT", "g");
+	var maxReg = new RegExp("@SportsonMax", "g");
+	var abcReg = new RegExp("@ABC", "g");
+	var fanaticReg = new RegExp("@975TheFanatic", "g");
+	var grittynhlReg = new RegExp("@GrittyNHL", "g");
+	var eaglesReg = new RegExp("@Eagles", "g");
+	var philliesReg = new RegExp("@Phillies", "g");
 	var sixersReg = new RegExp("@sixers", "g");
-	var unionReg = new RegExp("@philaunion", "g");
-	var brinkReg = new RegExp ("@bobbybrink19", "g");
+	var unionReg = new RegExp("@PhilaUnion", "g");
+	var stgReg = new RegExp("@SnowTheGoalie", "g");
+	var charitiesReg = new RegExp("@FlyersCharities", "g");
+	var tcenterReg = new RegExp("@FlyersTCenter", "g");
+	var brinkReg = new RegExp ("@BobbyBrink19", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
 	var foersterReg = new RegExp ("@tfoerster8", "g");
 	var johnsonReg = new RegExp("@6ErikJohnson", "g");
-	var laughtonReg = new RegExp("@laughts21", "g");
+	var laughtonReg = new RegExp("@Laughts21", "g");
+	var myrtetusReg = new RegExp("@jasonmyrt", "g");
+	var sanheimReg= new RegEp("@sanheim17", "g");
+	var simmondsReg = new RegExp("@Simmonds17", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
 
@@ -92,8 +102,8 @@ export default async function getPostText()
 		var contentString = JSON.stringify(contentJSON); // Convert the content of the post into a JSON string.
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
 		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
-		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(fanaticReg, "97.5 The Fanatic").replace(nhlgrittyReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com");
-		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates").replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson").replace(laughtonReg, "Scott Laughton");
+		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(espnplusReg, "ESPN+").replace(tntReg, "TNT").replace(maxReg, "Max").replace(abcReg, "ABC").replace(fanaticReg, "97.5 The Fanatic").replace(grittyhlReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com").replace(stgReg, "Snow The Goalie").replace(charitiesReg, "Flyers Charities").replace(tcenterReg, "the Flyers Training Center";
+		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates").replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson").replace(laughtonReg, "Scott Laughton").replace(myrtetusReg, "@jasonmyrt.bsky.social").replace(sanheimReg, "Travis Sanheim").replace(simmondsReg, "Wayne Simmonds");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
