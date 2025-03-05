@@ -28,7 +28,7 @@ export default async function getPostText()
 	var huluReg = new RegExp("@hulu@twitter.com", "g");
 	var espnReg = new RegExp("@espn@twitter.com", "g");
 	var fanaticReg = new RegExp("@975thefanatic@twitter.com", "g");
-	var grittyReg = new RegExp("@nhlgritty@twitter.com", "g");
+	var nhlgrittyReg = new RegExp("@nhlgritty@twitter.com", "g");
 	var eaglesReg = new RegExp("@eagles@twitter.com", "g");
 	var philliesReg = new RegExp("@phillies@twitter.com", "g");
 	var sixersReg = new RegExp("@sixers@twitter.com", "g");
