@@ -93,7 +93,7 @@ export default async function getPostText()
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
 		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
 		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(fanaticReg, "97.5 The Fanatic").replace(nhlgrittyReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com");
-		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates).replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson).replace(laughtonReg, "Scott Laughton");
+		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates").replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson").replace(laughtonReg, "Scott Laughton");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
