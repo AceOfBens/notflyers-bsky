@@ -104,9 +104,46 @@ export default async function getPostText()
 		var contentJSON = objJSON[i]["content"]; // Filter through all the values of the JSON object, to get just the content of post i. 
 		var contentString = JSON.stringify(contentJSON); // Convert the content of the post into a JSON string.
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
-		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
-		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(espnplusReg, "ESPN+").replace(tntReg, "TNT").replace(maxReg, "Max").replace(abcReg, "ABC").replace(fanaticReg, "97.5 The Fanatic").replace(grittynhlReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com").replace(stgReg, "Snow The Goalie").replace(charitiesReg, "Flyers Charities").replace(tcenterReg, "the Flyers Training Center");
-		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates").replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson").replace(laughtonReg, "Scott Laughton").replace(myrtetusReg, "@jasonmyrt.bsky.social").replace(sanheimReg, "Travis Sanheim").replace(simmondsReg, "Wayne Simmonds").replace(yorkReg, "Cam York");
+		// Meta data
+		contentString = contentString.replace(twitterReg, "");
+		contentString = contentString.replace(nhlflyersReg, "notflyers.bsky.social");
+		contentString = contentString.replace(sportsBotsReg, "");
+		contentString = contentString.replace(logoReg, "");
+		contentString = contentString.replace(quoteReg, `"`);
+		contentString = contentString.replace(andReg, "&");
+		contentString = contentString.replace(pReg, "\n\n");
+		contentString = contentString.replace(brReg, "\n");
+		contentString = contentString.replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
+		// Brand accounts
+		contentString = contentString.replace(nbcsphillyReg, "NBCSP");
+		contentString = contentString.replace(wmmrReg, "93.3 WMMR");
+		contentString = contentString.replace(pecoReg, "PECO");
+		contentString = contentString.replace(wfcReg, "Wells Fargo Center");
+		contentString = contentString.replace(huluReg, "Hulu");
+		contentString = contentString.replace(espnReg, "@espn.com");
+		contentString = contentString.replace(espnplusReg, "ESPN+");
+		contentString = contentString.replace(tntReg, "TNT");
+		contentString = contentString.replace(maxReg, "Max");
+		contentString = contentString.replace(abcReg, "ABC");
+		contentString = contentString.replace(fanaticReg, "97.5 The Fanatic");
+		contentString = contentString.replace(grittynhlReg, "Gritty");
+		contentString = contentString.replace(eaglesReg, "@philadelphiaeagles.bsky.social");
+		contentString = contentString.replace(philliesReg, "@phillies.com");
+		contentString = contentString.replace(sixersReg, "@sixersnba.bsky.social");
+		contentString = contentString.replace(unionReg, "@philadelphiaunion.com");
+		contentString = contentString.replace(stgReg, "Snow The Goalie");
+		contentString = contentString.replace(charitiesReg, "Flyers Charities");
+		contentString = contentString.replace(tcenterReg, "the Flyers Training Center");
+		// Player & people accounts
+		contentString = contentString.replace(brinkReg, "Bobby Brink");
+		contentString = contentString.replace(catesReg, "Noah Cates");
+		contentString = contentString.replace(foersterReg, "Tyson Foerster");
+		contentString = contentString.replace(johnsonReg, "Erik Johnson");
+		contentString = contentString.replace(laughtonReg, "Scott Laughton");
+		contentString = contentString.replace(myrtetusReg, "@jasonmyrt.bsky.social");
+		contentString = contentString.replace(sanheimReg, "Travis Sanheim");
+		contentString = contentString.replace(simmondsReg, "Wayne Simmonds");
+		contentString = contentString.replace(yorkReg, "Cam York");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
