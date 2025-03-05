@@ -21,6 +21,7 @@ export default async function getPostText()
 	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var nhlflyersReg = new RegExp("@nhlflyers@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
+	
 	var nbcsphillyReg = new RegExp("@NBCSPhilly", "g");
 	var wmmrReg = new RegExp("@933WMMR", "g");
 	var pecoReg = new RegExp("@PECOConnect", "g");
@@ -40,6 +41,7 @@ export default async function getPostText()
 	var stgReg = new RegExp("@SnowTheGoalie", "g");
 	var charitiesReg = new RegExp("@FlyersCharities", "g");
 	var tcenterReg = new RegExp("@FlyersTCenter", "g");
+	
 	var brinkReg = new RegExp ("@BobbyBrink19", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
 	var foersterReg = new RegExp ("@tfoerster8", "g");
@@ -48,6 +50,7 @@ export default async function getPostText()
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
 	var sanheimReg= new RegExp("@sanheim17", "g");
 	var simmondsReg = new RegExp("@Simmonds17", "g");
+	var yorkReg = new RegExp("camyork2", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
 
