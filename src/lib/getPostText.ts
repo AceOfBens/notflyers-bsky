@@ -50,7 +50,7 @@ export default async function getPostText()
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
 	var sanheimReg= new RegExp("@sanheim17", "g");
 	var simmondsReg = new RegExp("@Simmonds17", "g");
-	var yorkReg = new RegExp("camyork2", "g");
+	var yorkReg = new RegExp("@camyork2", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
 
