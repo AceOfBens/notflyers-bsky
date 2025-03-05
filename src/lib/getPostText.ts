@@ -23,6 +23,8 @@ export default async function getPostText()
 	var nhlflyersReg = new RegExp("@nhlflyers@sportsbots.xyz", "g"); // A regex to deal with Flyers's @. Should be replaced with the bot's @.
 	var nbcsphillyReg = new RegExp("@nbcsphilly@twitter.com", "g");
 	var wmmrReg = new RegExp("@933WMMR@twitter.com", "g");
+	var pecoReg = new RegExp("@PECOConnect@twitter.com", "g");
+	var wfcReg = new RegExp("@wellsfargoctr@twitter.com", "g");
 	var brinkReg = new RegExp ("@bobbybrink19@twitter.com", "g");
 	var catesReg = new RegExp("@cates_noah@twitter.com", "g");
 	var foersterReg = new RegExp ("@tfoerster8@twitter.com", "g");
@@ -79,8 +81,9 @@ export default async function getPostText()
 		var contentJSON = objJSON[i]["content"]; // Filter through all the values of the JSON object, to get just the content of post i. 
 		var contentString = JSON.stringify(contentJSON); // Convert the content of the post into a JSON string.
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
-		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, "").replace(nbcsphillyReg, "@nbcsportsphiladelphia.com"); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
-		contentString = contentString.replace(wmmrReg, "93.3 WMMR").replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates).replace(foersterReg, "Tyson Foerster");
+		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
+		contentString = contentString.replace(nbcsphillyReg, "@nbcsportsphiladelphia.com").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center");
+		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates).replace(foersterReg, "Tyson Foerster");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
