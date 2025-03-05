@@ -46,7 +46,7 @@ export default async function getPostText()
 	var johnsonReg = new RegExp("@6ErikJohnson", "g");
 	var laughtonReg = new RegExp("@Laughts21", "g");
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
-	var sanheimReg= new RegEp("@sanheim17", "g");
+	var sanheimReg= new RegExp("@sanheim17", "g");
 	var simmondsReg = new RegExp("@Simmonds17", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
@@ -102,7 +102,7 @@ export default async function getPostText()
 		var contentString = JSON.stringify(contentJSON); // Convert the content of the post into a JSON string.
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
 		contentString = contentString.replace(twitterReg, "").replace(nhlflyersReg, "notflyers.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
-		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(espnplusReg, "ESPN+").replace(tntReg, "TNT").replace(maxReg, "Max").replace(abcReg, "ABC").replace(fanaticReg, "97.5 The Fanatic").replace(grittyhlReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com").replace(stgReg, "Snow The Goalie").replace(charitiesReg, "Flyers Charities").replace(tcenterReg, "the Flyers Training Center");
+		contentString = contentString.replace(nbcsphillyReg, "NBCSP").replace(wmmrReg, "93.3 WMMR").replace(pecoReg, "PECO").replace(wfcReg, "Wells Fargo Center").replace(huluReg, "Hulu").replace(espnReg, "@espn.com").replace(espnplusReg, "ESPN+").replace(tntReg, "TNT").replace(maxReg, "Max").replace(abcReg, "ABC").replace(fanaticReg, "97.5 The Fanatic").replace(grittynhlReg, "Gritty").replace(eaglesReg, "@philadelphiaeagles.bsky.social").replace(philliesReg, "@phillies.com").replace(sixersReg, "@sixersnba.bsky.social").replace(unionReg, "@philadelphiaunion.com").replace(stgReg, "Snow The Goalie").replace(charitiesReg, "Flyers Charities").replace(tcenterReg, "the Flyers Training Center");
 		contentString = contentString.replace(brinkReg, "Bobby Brink").replace(catesReg, "Noah Cates").replace(foersterReg, "Tyson Foerster").replace(johnsonReg, "Erik Johnson").replace(laughtonReg, "Scott Laughton").replace(myrtetusReg, "@jasonmyrt.bsky.social").replace(sanheimReg, "Travis Sanheim").replace(simmondsReg, "Wayne Simmonds");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
