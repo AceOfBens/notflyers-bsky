@@ -12,7 +12,7 @@ const mastodon = new Mastodon.API({access_token: 'DlRovob5ujTMeOFQFeWARurfj-oy8H
 */
 export default async function getPostText() 
 {
-	const limitVal = 3; // The number of posts to get from Mastodon.
+	const limitVal = 15; // The number of posts to get from Mastodon.
 	var pReg = new RegExp("</p><p>", "g"); // A regex to deal with <p></p>. This should create a new section in the text, which we do via 2 line breaks.
 	var brReg = new RegExp("<br>", "g"); // A regex to deal with <br>. This should go to the next line, which we do via a line break. 
 	var quoteReg = new RegExp(`\\\\"`, "g"); // A regex to deal with \". This should be replaced with a " value with no \.
@@ -145,7 +145,7 @@ export default async function getPostText()
 		contentString = contentString.replace(simmondsReg, "Wayne Simmonds");
 		contentString = contentString.replace(yorkReg, "Cam York");
 
-		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
+		if (contentString.includes(" RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
 			contentString = contentString + "\n\n (Offer not valid on Bluesky.)";
 		}
