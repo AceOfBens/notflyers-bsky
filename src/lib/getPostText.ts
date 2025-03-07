@@ -145,7 +145,7 @@ export default async function getPostText()
 		contentString = contentString.replace(simmondsReg, "Wayne Simmonds");
 		contentString = contentString.replace(yorkReg, "Cam York");
 
-		if (contentString.includes(" RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
+		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
 			contentString = contentString + "\n\n (Offer not valid on Bluesky.)";
 		}
