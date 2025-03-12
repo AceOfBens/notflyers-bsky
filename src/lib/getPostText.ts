@@ -24,7 +24,7 @@ export default async function getPostText()
 	
 	var nbcsphillyReg = new RegExp("@NBCSPhilly", "g");
 	var wmmrReg = new RegExp("@933WMMR", "g");
-	var pecoReg = new RegExp("@PECOConnect", "g");
+	var pecoReg = new RegExp("@PECOconnect", "g");
 	var wfcReg = new RegExp("@WellsFargoCtr", "g");
 	var huluReg = new RegExp("@hulu", "g");
 	var espnReg = new RegExp("@espn", "g");
@@ -41,10 +41,11 @@ export default async function getPostText()
 	var stgReg = new RegExp("@SnowTheGoalie", "g");
 	var charitiesReg = new RegExp("@FlyersCharities", "g");
 	var tcenterReg = new RegExp("@FlyersTCenter", "g");
-	
-	var brinkReg = new RegExp ("@BobbyBrink19", "g");
+
+	var abolsReg = new RegExp("Abols", "g");
+	var brinkReg = new RegExp("@BobbyBrink19", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
-	var foersterReg = new RegExp ("@tfoerster8", "g");
+	var foersterReg = new RegExp("@tfoerster8", "g");
 	var johnsonReg = new RegExp("@6ErikJohnson", "g");
 	var laughtonReg = new RegExp("@Laughts21", "g");
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
@@ -135,6 +136,7 @@ export default async function getPostText()
 		contentString = contentString.replace(charitiesReg, "Flyers Charities");
 		contentString = contentString.replace(tcenterReg, "the Flyers Training Center");
 		// Player & people accounts
+		contentString = contentString.replace(abolsReg, "Ābols");
 		contentString = contentString.replace(brinkReg, "Bobby Brink");
 		contentString = contentString.replace(catesReg, "Noah Cates");
 		contentString = contentString.replace(foersterReg, "Tyson Foerster");
