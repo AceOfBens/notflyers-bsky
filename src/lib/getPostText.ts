@@ -42,6 +42,7 @@ export default async function getPostText()
 	var charitiesReg = new RegExp("@FlyersCharities", "g");
 	var tcenterReg = new RegExp("@FlyersTCenter", "g");
 	var lvphantomsReg = new RegExp("@LVPhantoms", "g");
+var alumniReg = new RegExp("@FlyersAlumni", "g")
 
 	var abolsReg = new RegExp("Abols", "g");
 	var brinkReg = new RegExp("@BobbyBrink19", "g");
@@ -137,6 +138,7 @@ export default async function getPostText()
 		contentString = contentString.replace(charitiesReg, "Flyers Charities");
 		contentString = contentString.replace(tcenterReg, "the Flyers Training Center");
 		contentString = contentString.replace(lvphantomsReg, "Lehigh Valley Phantoms");
+  contentString = contentString.replace(alumniReg, "Flyers Alumni");
 		// Player & people accounts
 		contentString = contentString.replace(abolsReg, "Ābols");
 		contentString = contentString.replace(brinkReg, "Bobby Brink");
