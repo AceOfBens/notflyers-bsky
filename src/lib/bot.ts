@@ -26,7 +26,7 @@ export default class Bot
   static defaultOptions: BotOptions = 
   {
     service: bskyService, // Variable detailing the service we want to initialize the Bluesky agent on.
-    dryRun: false, // Change this to true if you want the bot to not actually post to Bluesky for testing purposes.
+    dryRun: true, // Change this to true if you want the bot to not actually post to Bluesky for testing purposes.
   } as const; // The options can't be changed mid-execution. Change these manually in source code if you want them to be different.
 
   /*
@@ -80,7 +80,7 @@ export default class Bot
     text: string | (Partial<AppBskyFeedPost.Record> & Omit<AppBskyFeedPost.Record, "createdAt">)
   ): Promise<void> {
 
-    var postNum = 3; // Specify the number of recent posts to compare from the logged in user's feed.
+    var postNum = 20; // Specify the number of recent posts to compare from the logged in user's feed.
     var bskyFeedAwait = await this.userAgent.app.bsky.feed.getAuthorFeed({actor: "notflyers.bsky.social", limit: postNum,}); // Get a defined number + 2 of most recent posts from the logged in user's feed.
     var bskyFeed = bskyFeedAwait["data"]["feed"]; // Filter down the await values so we are only looking at the feeds.
     for (let i = 0; i < bskyFeed.length; i++) // Consider all collected posts.
