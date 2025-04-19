@@ -30,15 +30,15 @@ That said, if the account is mentioned as a suggestion for someone to follow it,
 
 ### Are this account's mentions and message requests monitored?
 
-Yes! I am actively logged into this account and try to check it at least once a day to make sure it's not broken in some way (as it has before and, unfortunately, I'm sure it will again). Currently, the DMs are closed, but I monitor the mentions (tags, replies, quotes) in case someone draws attention to an issue that way. Also, because spam bots are becoming more of an issue lately and I will hide their replies as I come across them.
+Yes! I am actively logged into this account and try to check it at least once a day to make sure it's not broken in some way (as it has before and, unfortunately, I'm sure it will again). Currently, the DMs are closed, but I monitor the mentions (tags, replies, quotes) in case someone draws attention to an issue that way. Also, spam bots replying to random posts are becoming more of an issue lately, and I will hide their replies as I come across them.
 
 ### Can you make a bot for [insert X/Twitter account]?
 
-If there is a mirror bot for it on Mastodon (check [@sportsbots@mastodon.social](https://www.sportsbots.xyz/), for example), then technically yes I can, but, frankly, I don't have enough email addresses to make so many new Bluesky accounts. [Try it yourself](https://github.com/AceOfBens/sports-mirror-bot-bsky/blob/main/README.md)!
+If there is a mirror bot for it on Mastodon (check [@sportsbots@mastodon.social](https://www.sportsbots.xyz/), for example), then technically yes I can, but, frankly, I don't have enough email addresses to make so many new Bluesky accounts, and I can't be arsed to make more email addresses for this purpose. But if there's a team or reporter or sports media outlet that hasn't made their way to Bluesky yet, you can [try making a mirror bot yourself](https://github.com/AceOfBens/sports-mirror-bot-bsky/blob/main/README.md)!
 
 ### How can I make a Bluesky mirror bot that isn't available on sportsbots.xyz?
 
-Great question! If there's no Mastodon mirror bot like the ones on sportsbots.xyz, then I have no idea. Like I said in the credits section at the top, I'm a graphic designer with experience as a social media manager, and the extent of my experience in coding is a few university classes in web design/building. The *vast* majority of this bot was built by [philnash](https://github.com/philnash) and [acarters](https://github.com/acarters). I'm sorry that I can't be of more help here :(
+Great question! If there's no Mastodon mirror bot like the ones on sportsbots.xyz, then I have no idea. Like I said in the credits section at the top, I'm a graphic designer with experience as a social media manager, and the extent of my experience in coding is a few university classes in web design/building. The ***vast*** majority of this bot was built by [philnash](https://github.com/philnash) and [acarters](https://github.com/acarters). I'm sorry that I can't be of more help here :(
 
 ### How long will this bot be up for?
 
