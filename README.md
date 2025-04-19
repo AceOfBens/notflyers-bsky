@@ -13,7 +13,7 @@ This repository is used to build the bot that cross posts content from [@NHLFlye
 
 I created a [template with instructions](https://github.com/AceOfBens/sports-mirror-bot-bsky/) on what to add or change in the [README file](https://github.com/AceOfBens/sports-mirror-bot-bsky/blob/main/README.md). 
 
-### Does the bot post immediately when the Phillies account posts on Twitter?
+### Does the bot post immediately when the Flyers account posts on Twitter?
 
 No. Sometimes I change tinker with this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](https://mastodon.social/@NHLFlyers@sportsbots.xyz) every 20 minutes. During busier times, like evenings (Eastern Time), which coincidentally is when the Flyers typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
 
