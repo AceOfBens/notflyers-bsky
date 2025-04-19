@@ -18,7 +18,7 @@ I created a [template with instructions](https://github.com/AceOfBens/sports-mir
 
 No. Sometimes I change this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](https://mastodon.social/@NHLFlyers@sportsbots.xyz) every 20 minutes. During busier times, like evenings (Eastern Standard/Daylight Time), which coincidentally is when the Flyers typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
 
-Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from several innings, so the time stamp on the Bluesky mirror post should not be used as a reference for anything other than when Github Actions ran a workflow for this bot. 
+Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from an entire period/intermission or longer, so the time stamp on the Bluesky mirror post should not be used as a reference for anything other than when Github Actions ran a workflow for this bot. 
 
 ### This account liked one of my posts. Is it programmed to like posts it's mentioned in?
 
