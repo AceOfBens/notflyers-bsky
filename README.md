@@ -1,6 +1,6 @@
 # Bluesky Mirror Bot 🦋
 
-This repository is used to build the bot that cross posts content from [@NHLFlyers](https://x.com/NHLFlyers) on X/Twitter to [@notflyers.bsky.social](https://bsky.app/profile/notflyers.bsky.social) on Bluesky by pulling from Mastodon's API and utitilizing the [Philadelphia Flyers mirror bot](https://mastodon.social/@NHLFlyers@sportsbots.xyz) on sportsbots.xyz.
+This repository is used to build the bot that cross posts content from [@NHLFlyers](https://x.com/NHLFlyers) on X/Twitter to [@notflyers.bsky.social](https://bsky.app/profile/notflyers.bsky.social) on Bluesky by utilizing Mastodon's API to pull from the [Philadelphia Flyers mirror bot](https://mastodon.social/@NHLFlyers@sportsbots.xyz) on sportsbots.xyz.
 
 ## Credits
 * [Phil Nash](https://github.com/philnash) for providing the code for building a bot that posts on its own schedule. [Phil Nash's Bluesky bot template](https://github.com/philnash/bsky-bot)
