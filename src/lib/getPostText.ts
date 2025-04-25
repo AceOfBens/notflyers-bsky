@@ -47,7 +47,7 @@ export default async function getPostText()
 
 	var abolsReg = new RegExp("Abols", "g");
 	var brinkReg = new RegExp("@BobbyBrink19", "g");
- var bumpReg = new RegExp("Alexbump14", "g");
+ var bumpReg = new RegExp("@Alexbump14", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
 	var foersterReg = new RegExp("@tfoerster8", "g");
  var kaplanReg = new RegExp("@DevinKaplan12", "g");
