@@ -47,6 +47,7 @@ export default async function getPostText()
 
 	var abolsReg = new RegExp("Abols", "g");
 	var brinkReg = new RegExp("@BobbyBrink19", "g");
+ var bumpReg = new RegExp("Alexbump14", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
 	var foersterReg = new RegExp("@tfoerster8", "g");
  var kaplanReg = new RegExp("@DevinKaplan12", "g");
@@ -143,7 +144,8 @@ export default async function getPostText()
   contentString = contentString.replace(alumniReg, "Flyers Alumni");
   contentString = contentString.replace(nhlReg, "NHL");
 		// Player & people accounts
-		contentString = contentString.replace(abolsReg, "Ābols");
+		contentString = contentString.replace(abolsReg, "Rodrigo Ābols");
+  contentString = contentString.replace(bumpReg, "Alex Bump")
 		contentString = contentString.replace(brinkReg, "Bobby Brink");
 		contentString = contentString.replace(catesReg, "Noah Cates");
 		contentString = contentString.replace(foersterReg, "Tyson Foerster");
