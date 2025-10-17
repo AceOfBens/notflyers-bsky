@@ -44,8 +44,7 @@ export default async function getPostText()
 	var lvphantomsReg = new RegExp("@LVPhantoms", "g");
 	var alumniReg = new RegExp("@FlyersAlumni", "g");
  	var nhlReg = new RegExp("@NHL", "g");
-	var dsReg = new RegExp("@dhwanisaraiya", "g");
-	var cocacoalReg = new RegExp("@CocaCola", "g");
+	var cocacolaReg = new RegExp("@CocaCola", "g");
 
 	var abolsReg = new RegExp("Abols", "g");
 	var brinkReg = new RegExp("@BobbyBrink19", "g");
@@ -57,6 +56,7 @@ export default async function getPostText()
 	var laughtonReg = new RegExp("@Laughts21", "g");
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
 	var sanheimReg= new RegExp("@sanheim17", "g");
+	var dsReg = new RegExp("@dhwanisaraiya_", "g");
 	var simmondsReg = new RegExp("@Simmonds17", "g");
 	var yorkReg = new RegExp("@camyork2", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
@@ -143,21 +143,24 @@ export default async function getPostText()
 		contentString = contentString.replace(charitiesReg, "Flyers Charities");
 		contentString = contentString.replace(tcenterReg, "the Flyers Training Center");
 		contentString = contentString.replace(lvphantomsReg, "Lehigh Valley Phantoms");
-  contentString = contentString.replace(alumniReg, "Flyers Alumni");
-  contentString = contentString.replace(nhlReg, "NHL");
+  		contentString = contentString.replace(alumniReg, "Flyers Alumni");
+  		contentString = contentString.replace(nhlReg, "NHL");
+		contentString = contentString.replace(cocacolaReg, "Coca Cola");
 		// Player & people accounts
 		contentString = contentString.replace(abolsReg, "Rodrigo Ābols");
-  contentString = contentString.replace(bumpReg, "Alex Bump")
+  		contentString = contentString.replace(bumpReg, "Alex Bump")
 		contentString = contentString.replace(brinkReg, "Bobby Brink");
 		contentString = contentString.replace(catesReg, "Noah Cates");
 		contentString = contentString.replace(foersterReg, "Tyson Foerster");
-contentString = contentString.replace(kaplanReg, "Devin Kaplan");
+		contentString = contentString.replace(kaplanReg, "Devin Kaplan");
 		contentString = contentString.replace(johnsonReg, "Erik Johnson");
 		contentString = contentString.replace(laughtonReg, "Scott Laughton");
 		contentString = contentString.replace(myrtetusReg, "@jasonmyrt.bsky.social");
 		contentString = contentString.replace(sanheimReg, "Travis Sanheim");
+		contentString = contentString.replace(dsReg, "@dsaraiya.bsky.social");
 		contentString = contentString.replace(simmondsReg, "Wayne Simmonds");
 		contentString = contentString.replace(yorkReg, "Cam York");
+		
 
 		if (contentString.includes(" RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
