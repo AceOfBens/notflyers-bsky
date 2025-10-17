@@ -42,15 +42,17 @@ export default async function getPostText()
 	var charitiesReg = new RegExp("@FlyersCharities", "g");
 	var tcenterReg = new RegExp("@FlyersTCenter", "g");
 	var lvphantomsReg = new RegExp("@LVPhantoms", "g");
- var alumniReg = new RegExp("@FlyersAlumni", "g")
- var nhlReg = new RegExp("@NHL", "g")
+	var alumniReg = new RegExp("@FlyersAlumni", "g");
+ 	var nhlReg = new RegExp("@NHL", "g");
+	var dsReg = new RegExp("@dhwanisaraiya", "g");
+	var cocacoalReg = new RegExp("@CocaCola", "g");
 
 	var abolsReg = new RegExp("Abols", "g");
 	var brinkReg = new RegExp("@BobbyBrink19", "g");
- var bumpReg = new RegExp("@Alexbump14", "g");
+ 	var bumpReg = new RegExp("@Alexbump14", "g");
 	var catesReg = new RegExp("@cates_noah", "g");
 	var foersterReg = new RegExp("@tfoerster8", "g");
- var kaplanReg = new RegExp("@DevinKaplan12", "g");
+ 	var kaplanReg = new RegExp("@DevinKaplan12", "g");
 	var johnsonReg = new RegExp("@6ErikJohnson", "g");
 	var laughtonReg = new RegExp("@Laughts21", "g");
 	var myrtetusReg = new RegExp("@jasonmyrt", "g");
