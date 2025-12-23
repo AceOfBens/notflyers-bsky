@@ -20,6 +20,16 @@ No. Sometimes I change this setting, but usually the bot is scheduled to check t
 
 Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from an entire period/intermission or longer, so the time stamp on the Bluesky mirror post should not be used as a reference for anything other than when Github Actions ran a workflow for this bot. 
 
+### Why does the bot pull from Mastodon and not X/Twitter?
+
+Once again, I'm not a dev guy, but as I understand it, you need to set up some access code in the bot that will tell the website that the bot is allowed to look at the website. Mastodon, being an open platform, allows this pretty freely! Once I got through all the jargon, it was pretty easy to set it up. But X/Twitter... well, that website is not as open, and their special access codes are paywalled, and personally, I'm not buying a blue checkmark just to run these bots. I'm not giving them money.
+
+I've seen other mirror bots that use work arounds like hooking up the mirror bot to an X/Twitter account. I'm not above using an account on there for this purpose, but it looked more complicated than what I have now, and I'm just a silly content creator! I make jokes, not bots.
+
+### Why hasn't the bot updated in several days?
+
+It's possible I tinkered with the code for one reason or another and broke something, but it's more likely that the Bluesky mirror bot isn't updating because the [Mastodon mirror bot](https://mastodon.social/@NHLFlyers@sportsbots.xyz) isn't updating. Please check there. It tends it just... take a lil siesta once a month.
+
 ### This account liked one of my posts. Is it programmed to like posts it's mentioned in?
 
 No, there are no instances in which this bot is programmed to like posts on Bluesky. If [@notflyers.bsky.social](https://bsky.app/profile/notflyers.bsky.social) liked your post, it was an actual human, and that actual human is [@aceofbens.com](https://bsky.app/profile/aceofbens.com) on Bluesky.
